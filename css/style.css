@@ -30,6 +30,9 @@ body {
     color: #45523B;
     min-width: 1320px;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 
 /* ------------------------------------------------------------- */
@@ -111,7 +114,9 @@ body {
     position: absolute;
     width: 120%;
     top: 80px;
-    display: none;
+
+    visibility: hidden;
+    clip-path: inset(0 0 100% 0);
 }
 
 .nav>li {
@@ -129,7 +134,10 @@ body {
 }
 
 .nav li:hover .sub {
-    display: block;
+    visibility: visible;
+
+    clip-path: inset(0 0 0 0);
+    transition: 1s;
 }
 
 /* top */
