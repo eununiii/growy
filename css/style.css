@@ -1,0 +1,776 @@
+@charset "UTF-8";
+
+/* font 카페24-고운밤 */
+@font-face {
+    font-family: 'Cafe24Oneprettynight';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #45523B;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: 'Paperlogy';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #45523B;
+    min-width: 1320px;
+}
+
+
+/* ------------------------------------------------------------- */
+/* top */
+.fix {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px 0;
+    right: 10px;
+    bottom: 10px;
+}
+.fix img{
+    display: block;
+    width: 62px;
+    height: 62px;
+}
+
+.header_wrap {
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    min-width: 1320px;
+}
+
+.top {
+    width: 1320px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    gap: 50px;
+    margin-left: -300px;
+}
+
+.nav>li>a {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    color: #2A3025;
+    padding: 25px 0;
+}
+
+.nav>li:hover>a {
+    color: #AF6934;
+}
+
+.nav_right {
+    display: flex;
+    gap: 30px;
+}
+.nav_right a:hover img{
+    filter: invert(50%);
+}
+
+.logo,
+.hambuger {
+    display: block;
+}
+
+.nav>li:nth-child(1)>a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* 서브메뉴 */
+.sub {
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    width: 120%;
+    top: 80px;
+    display: none;
+}
+
+.nav>li {
+    position: relative;
+}
+
+.sub a {
+    display: block;
+    padding: 20px;
+}
+
+.sub a:hover {
+    color: #2A3025;
+    font-weight: 700;
+}
+
+.nav li:hover .sub {
+    display: block;
+}
+
+/* top */
+
+/* banner */
+
+/* mySwiper 꾸미기 */
+.mySwiper {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+    color: rgba(255, 255, 255, 0.7);
+    top: 81%;
+    margin-top: -30.8px;
+    transform: scale(70%);
+}
+
+.mySwiper .swiper-button-prev {
+    left: 38%;
+}
+
+.mySwiper .swiper-button-next {
+    left: 42%;
+}
+
+.mySwiper .swiper-pagination {
+    top: 78%;
+    left: 13%;
+    text-align: left;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    width: auto;
+    height: 30px;
+}
+
+.mySwiper .autoplay-progress {
+    position: absolute;
+    top: 80%;
+    left: 18%;
+    z-index: 10;
+    width: 250px;
+    height: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--swiper-theme-color);
+}
+
+.mySwiper .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 8px;
+    stroke: rgba(255, 255, 255, 0.7);
+    fill: none;
+    stroke-dashoffset: calc(250px * (1 - var(--progress)));
+    stroke-dasharray: 250;
+}
+
+.mySwiper .autoplay-progress span {
+    display: none;
+}
+
+/* banner */
+
+/* seeds배너 - 브랜드 소개 */
+.intro_wrap {
+    overflow: hidden;
+}
+
+.intro {
+    width: 1320px;
+    margin: 100px auto;
+    position: relative;
+}
+
+.intro img {
+    margin-left: -180px;
+}
+
+.intro_text {
+    position: absolute;
+    top: 40%;
+    right: 8%;
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px 0px;
+    z-index: 5;
+}
+
+.intro_logo {
+    width: 127px;
+    height: 52px;
+    position: absolute;
+    right: 210px;
+    margin-right: -62px;
+    top: -80px;
+}
+
+.intro_text p {
+    font-family: 'Cafe24Oneprettynight';
+    font-size: 25px;
+}
+
+.intro_text span {
+    font-size: 30px;
+}
+
+/* seeds배너 - 브랜드 소개 */
+
+/* best items */
+h1 {
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 100px;
+    padding-bottom: 60px;
+}
+
+/* js css */
+.mySwiper_2 {
+    max-width: 1620px;
+    height: 100%;
+}
+
+.mySwiper_2 .swiper-slide {
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 381px;
+    height: 600px;
+    gap: 20px 0px;
+}
+
+.mySwiper_2 .swiper-slide h4 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+.mySwiper_2 .swiper-slide:hover a {
+    filter: drop-shadow(0px 0px 5px rgba(69, 82, 59, 0.3)) saturate(140%);
+}
+
+@media (max-width: 760px) {
+    .mySwiper_2 .swiper-button-next {
+        right: 20px;
+        transform: rotate(90deg);
+    }
+
+    .mySwiper_2 .swiper-button-prev {
+        left: 20px;
+        transform: rotate(90deg);
+    }
+}
+
+.mySwiper_2 .swiper-button-next,
+.mySwiper_2 .swiper-button-prev {
+    color: #ABB274;
+}
+
+/* js css */
+/* best items */
+
+/* <!-- 식물영양제 4종 --> */
+/* 이미지나열 */
+.item {
+    width: 1320px;
+    margin: 150px auto;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.item_nav {
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.item_nav li:hover img {
+    filter: drop-shadow(0px 0px 5px rgba(69, 82, 59, 0.3)) saturate(140%);
+}
+
+.item_nav p {
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.item_nav h4 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/* 이미지 나열 */
+
+/* 제품소개 */
+.food_wrap {
+    background: url(./food_bg_2.png) no-repeat center top, linear-gradient(to bottom, #fff 65px, #FDFFEE 65px);
+    overflow: hidden;
+}
+
+
+.wrap {
+    width: 1320px;
+    height: 800px;
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 150px;
+}
+
+.food_wrap .wrap:nth-child(1) {
+    padding-top: 320px;
+}
+
+.main_img {
+    width: 504px;
+    height: 723px;
+}
+
+.text_1 {
+    width: 760px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    overflow: hidden;
+}
+
+.text_1 h3 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.text_1 a {
+    font-size: 20px;
+}
+
+.text_1 a:hover {
+    color: #ABB274;
+}
+
+/* 제품 소개 */
+
+
+
+/* js css */
+.swiper-item-right {
+    width: 1050px;
+    height: 500px;
+    position: absolute;
+    top: -460px;
+    left: 420px;
+}
+
+.swiper-item .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-item .swiper-slide img {
+    display: block;
+    width: 319px;
+    height: 420px;
+}
+
+.swiper-item .swiper-wrapper {
+    gap: 0 5px;
+}
+
+/* 왼쪽내용 스와이퍼 */
+.swiper-item-left {
+    width: 1050px;
+    height: 500px;
+    position: absolute;
+    top: -460px;
+    left: -420px;
+    transform: scale(-1, 1);
+}
+
+.swiper-item-left .swiper-slide img {
+    transform: scale(-1, 1);
+}
+
+/* 왼쪽내용 스와이퍼 */
+
+/* --스크롤바 컬러 변경 -- */
+.swiper-item .swiper-scrollbar.swiper-scrollbar-horizontal {
+    background-color: rgba(171, 178, 116, 0.5);
+}
+
+.swiper-item .swiper-scrollbar-drag {
+    background-color: #ABB274;
+}
+
+/* js css */
+/* 제품 소개 */
+
+/* <!-- 식물영양제 4종 --> */
+
+/* ------------씨앗키트 ----------------*/
+/* 이미지나열 */
+.seedkit img {
+    padding-bottom: 20px;
+}
+
+/* (나머지 css는 식물영양제와 동일합니다.) */
+
+/* 이미지나열 */
+
+/* 씨앗키트 제품설명 */
+.seedkit_wrap {
+    background: url(./seedkit_bg_2.png) no-repeat center top, linear-gradient(to bottom, #fff 50px, #FFFCDF 50px);
+    overflow: hidden;
+}
+
+.seedkit_wrap .wrap:nth-child(1) {
+    padding-top: 240px;
+}
+
+.herb,
+.herb a {
+    color: #845E7F;
+}
+
+.herb a:hover {
+    color: #c790c1;
+}
+
+.flower,
+.flower a {
+    color: #66788E;
+}
+
+.flower a:hover {
+    color: #9ab4d3;
+}
+
+.seed-scroll .swiper-scrollbar.swiper-scrollbar-horizontal {
+    background-color: #ECE5A0
+}
+
+.seed-scroll .swiper-scrollbar-drag {
+    background-color: #C88B5D;
+}
+
+/* 씨앗키트 제품설명 */
+
+/* ------------씨앗키트 ----------------*/
+
+/* ----------review 베스트리뷰 ------------ */
+.review_wrap {
+    margin: 150px auto;
+}
+
+.swiper-review {
+    width: 100%;
+    height: 100%;
+    margin: 50px 0;
+}
+
+.swiper-review .swiper-slide {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 621px;
+    height: 415px;
+    gap: 20px 0;
+
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+
+.swiper-review .swiper-slide img {
+    width: 190px;
+    height: 35px;
+}
+
+.swiper-review .swiper-slide h5 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #ABB274;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.swiper-review .swiper-slide p {
+    line-height: 2;
+    font-weight: 300;
+}
+
+/* 배경이미지 */
+.swiper-review .review1 {
+    background: #fbfbfb url(./review_img1.png) no-repeat 90% 10%;
+}
+
+.swiper-review .review2 {
+    background: #fbfbfb url(./review_img2.png) no-repeat 90% 10%;
+}
+
+.swiper-review .review3 {
+    background: #fbfbfb url(./review_img3.png) no-repeat 90% 10%;
+}
+
+/* 배경이미지 */
+
+/* ----------review 베스트리뷰 ------------ */
+
+/* <!-- ------------오프라인 스토어 소개 ------------------- --> */
+/* 띠배너 */
+.banner_wrap {
+    background-color: #B3D5DF;
+}
+
+.line_banner {
+    width: 1320px;
+    margin: auto;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #4D321D;
+}
+
+.line_banner h5 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.line_banner p {
+    font-weight: 300;
+    padding-top: 15px 0;
+}
+
+.first_workshop {
+    margin-left: -180px;
+}
+
+.line_banner a {
+    display: inline-block;
+    color: #4D321D;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #fff;
+    border-radius: 40px;
+    padding: 12px;
+}
+
+.line_banner a:hover {
+    color: #AF6934;
+}
+
+/* 띠배너 */
+/* 소개 */
+.store_bg {
+    background-color: #F3F2E9;
+}
+
+.store_wrap {
+    width: 1320px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.store_wrap h1 {
+    margin: 0;
+    padding: 100px 0;
+}
+
+.store {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    color: #4D321D;
+    padding-bottom: 150px;
+}
+
+.store_wrap p {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.store_text span {
+    display: block;
+    padding-bottom: 30px;
+}
+
+.store .right_img {
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 57%;
+}
+
+.store .left_img {
+    display: block;
+    position: absolute;
+    top: 40%;
+    margin-top: -69px;
+    left: 33%;
+    z-index: 10;
+}
+
+.store a:hover .right_img,
+.store a:hover .left_img {
+    filter: brightness(90%);
+}
+
+.store_text h5 {
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    padding-left: 30px;
+}
+
+/* 소개 */
+
+/* <!-- ------------오프라인 스토어 소개 ------------------- --> */
+
+/*------------------------ 이벤트 -------------------------------- */
+.event_wrap {
+    margin: auto;
+    overflow: hidden;
+}
+
+.swiper-event {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.swiper-event .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-event .swiper-slide img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.swiper-event .swiper-button-next:after,
+.swiper-event .swiper-button-prev:after {
+    content: '';
+}
+
+.swiper-event .swiper-button-next {
+    right: 22%;
+}
+
+.swiper-event .swiper-button-prev {
+    left: 22%;
+}
+
+/*------------------------ 이벤트 -------------------------------- */
+
+/* -----------------------푸터 ------------------------- */
+footer {
+    background-color: #DBE1AB;
+}
+
+footer .footer_bg {
+    display: block;
+    width: 100%;
+}
+
+.footer_wrap {
+    margin: auto;
+    padding: 30px 0;
+    color: #A1A773;
+    max-width: 1820px;
+}
+
+.footer_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(42, 48, 37, 0.7);
+    margin-bottom: 20px;
+}
+
+.footer_info {
+    margin-left: -600px;
+    padding-bottom: 20px;
+}
+
+.footer_info li:nth-child(2) {
+    font-size: 22px;
+    font-weight: 700;
+    color: #45523B;
+    padding-bottom: 15px;
+}
+
+.sns {
+    display: flex;
+    gap: 0 15px;
+}
+
+.sns a:hover img {
+    filter: opacity(0.5);
+}
+
+
+
+/* -----------------------푸터 ------------------------- */
